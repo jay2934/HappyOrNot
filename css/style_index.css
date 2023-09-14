@@ -1,0 +1,10 @@
+body{
+    margin: 0px;
+    background-color: rgb(9, 45, 116);
+    text-align: center;
+}
+/*USE H2 EXCLUSIVLY FOR ERROR MESSAGES!!!!*/
+h2{
+color: red;
+}
+/*USE H2 EXCLUSIVLY FOR ERROR MESSAGES!!!!*/
