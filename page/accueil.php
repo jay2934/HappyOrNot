@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION["connection"] = true; //enlever a la fin
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,16 +14,29 @@ session_start();
 </head>
 <body>
     <nav>
-        <h1 style="display:inline;">happyornot</h1>
+        <h1 id="title" class="inline">happyornot</h1>
+        <h1 id="menu" class="inline" onclick="menu()">•••</h1>
     </nav>
-    <form action="">
-        <input type="text" name="Evenement">
-        <input type="date" name="test">
-        <input type="text" name="test">
-        <input type="text" name="test">
-        <input type="text" name="test">
-        <input type="text" name="test">
-        <input type="text" name="test">
-    </form>
+
+    <a href="./creationEvenement.php">
+        <div class="Les3Evenement">
+            <h1>Creation Evenement</h2> 
+        </div>
+    </a>
+    
+    <a href="./evenement.php">
+        <div class="Les3Evenement">
+            <h1>Lancer Evenement</h2> 
+        </div>
+    </a>
+    
+    <a href="./gestionEvenement.php">
+        <div class="Les3Evenement">
+            <h1>Gestion Evenement</h2> 
+        </div>
+    </a>
+
+    
+    <script src="../js/action_accueil.js"></script>
 </body>
 </html>

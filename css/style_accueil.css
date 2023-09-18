@@ -9,3 +9,30 @@ nav {
     color: white;
     font-family: Glossy;
 }
+
+.inline{
+  display: inline;
+}
+
+#menu{
+  position: fixed;
+  right: 20px;
+}
+
+.Les3Evenement
+{
+  background-color: aquamarine;
+  color: black;
+  height: 30.7vh;
+  border: black solid;
+  border-top: 0px black solid;
+  text-align: center;
+}
+a:hover
+{
+    transition: 2s;
+    font-size: xx-large;
+}
+a:link {
+  text-decoration: none;
+}
