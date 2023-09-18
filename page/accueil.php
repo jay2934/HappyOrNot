@@ -13,10 +13,16 @@ session_start();
 </head>
 <body>
     <nav>
-        <h1><span>H</span><span>a</span><span>p</span><span id="test">p</span><span>y</span><span id="test">o</span><span id="test">r</span><span id="test">n</span><span id="test">o</span><span>t</span></h1>
+        <h1 style="display:inline;">happyornot</h1>
     </nav>
     <form action="">
-
+        <input type="text" name="Evenement">
+        <input type="date" name="test">
+        <input type="text" name="test">
+        <input type="text" name="test">
+        <input type="text" name="test">
+        <input type="text" name="test">
+        <input type="text" name="test">
     </form>
 </body>
 </html>
