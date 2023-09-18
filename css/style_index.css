@@ -1,10 +1,26 @@
 body{
     margin: 0px;
-    background-color: rgb(9, 45, 116);
+    /*background-image: linear-gradient(#31EC56,#EF036C,#EE72F8);*/
+    background-image: url(../img/1.jpg);
     text-align: center;
+    height: 100vh;
+    background-size: cover;
 }
 /*USE H2 EXCLUSIVLY FOR ERROR MESSAGES!!!!*/
 h2{
 color: red;
 }
 /*USE H2 EXCLUSIVLY FOR ERROR MESSAGES!!!!*/
+#container
+{
+    position: absolute;
+    color: white;
+    top: 20%;
+    left: 38%;
+    right: 38%;
+    bottom: 34%;
+    background-color: #292424;
+    border: groove black 5px;
+    border-radius: 30px;
+    opacity: 0.95;
+}

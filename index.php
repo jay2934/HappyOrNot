@@ -61,13 +61,16 @@ session_start();
         ?>
 
 
-
-    <h1>Login</h1>
-    <form action="" method="post">
-        <p>Nom Utilisateur:</p><input type="text" name="userName" id="userName">
-        <p>Mot de Passe:</p><input type="password" name="password" id="password">
-        <input type="submit">
-    </form>
+    <div id="container">
+        <h1>Login</h1>
+        <form action="" method="post">
+            <p>Nom Utilisateur:</p><input type="text" name="userName" id="userName">
+            <p>Mot de Passe:</p><input type="password" name="password" id="password">
+            <br>
+            <br>
+            <input type="submit">
+        </form>
+    </div>
     
 </body>
 </html>
