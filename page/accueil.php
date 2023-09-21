@@ -1,6 +1,5 @@
 <?php
 session_start();
-$_SESSION["connection"] = true; //enlever a la fin
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,28 +14,71 @@ $_SESSION["connection"] = true; //enlever a la fin
 <body>
     <nav>
         <h1 id="title" class="inline">happyornot</h1>
-        <h1 id="menu" class="inline" onclick="menu()">•••</h1>
+        <button class="inline" id="menu" onclick="_open()">•••</h1>
     </nav>
 
-    <a href="./creationEvenement.php">
-        <div class="Les3Evenement">
-            <h1>Creation Evenement</h2> 
-        </div>
-    </a>
-    
-    <a href="./evenement.php">
-        <div class="Les3Evenement">
-            <h1>Lancer Evenement</h2> 
-        </div>
-    </a>
-    
-    <a href="./gestionEvenement.php">
-        <div class="Les3Evenement">
-            <h1>Gestion Evenement</h2> 
-        </div>
-    </a>
+    <div id="sideBar">
+        <a href="../index.php" <?php session_unset(); session_destroy(); ?>>Sign Out</a>
+        <a href="#">TryMe</a>
+        <a href="#">TryMe</a>
+    </div>
 
     
+
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm">
+                <a href="./creationEvenement.php">
+                    <div class="les3evenements">
+                        <h1>Creation Evenement</h2> 
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <a href="./evenement.php">
+                    <div class="les3evenements">
+                        <h1>Lancer Evenement</h2> 
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <a href="./gestionEvenement.php">
+                    <div class="les3evenements">
+                        <h1>Gestion Evenement</h2> 
+                    </div>
+                </a>
+            </div>
+        </div> 
+    </div>
+
+    
+    
     <script src="../js/action_accueil.js"></script>
+    <script>
+        var door = false;
+
+        function _open(){
+
+            if (door == true)
+            {
+                document.getElementById("sideBar").style.display = "fixed";
+                door = false;
+            }
+            else 
+            {
+                document.getElementById("sideBar").style.display = "none";
+                door = true;
+            }
+            
+        }
+
+    </script>
 </body>
 </html>
