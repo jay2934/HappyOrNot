@@ -15,7 +15,7 @@ session_start();
 <body>
     <?php
 
-        $userName= $password = "";
+        $userName= $password = $id = "";
         $userNameErreur = $passwordErreur = $wrongAns = "";
         $erreur = false;
 
@@ -55,21 +55,22 @@ session_start();
                         die("Connection failed: " . $conn->connect_error);
                     }
 
-                    $sql = "SELECT * FROM login WHERE userName='$user' AND password='$password'";
+                    $sql = "SELECT id FROM login WHERE userName='$user' AND password='$password'";
 
                     $result = $conn->query($sql);
 
                     if ($result->num_rows > 0) {
                         $row = $result->fetch_assoc();
                         $_SESSION["connexion"] = true;
-                        $_SESSION["connexion"];
-                        
+
+                        $_SESSION['user_id'] = $row['id'];
+       
                         header('Location: ./page/accueil.php');
                         //GESTION WHEN LOGGED IN
                     }
                     else {
                         //GESTION ERREUR
-                        $wrongAns = "<h2>Nom d'usager ou mot de passe invalide</h2>";
+                        $wrongAns = "<p>Nom d'usager ou mot de passe invalide<p>";
                         $erreur = true;
                     }
                     $conn->close();

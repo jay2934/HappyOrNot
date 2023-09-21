@@ -1,5 +1,16 @@
 <?php
 session_start();
+if(isset($_SESSION['user_id'])) {
+    if(isset($_POST['logout'])) {
+        $_SESSION = array();
+        session_destroy();
+        header("Location: ../index.php");
+        exit();
+    }
+} else {
+    header("Location: ../index.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,66 +23,54 @@ session_start();
     <link rel="stylesheet" href="../css/style_accueil.css">
 </head>
 <body>
+
+
     <nav>
         <h1 id="title" class="inline">happyornot</h1>
         <button class="inline" id="menu" onclick="_open()">•••</h1>
     </nav>
 
     <div id="sideBar">
-        <a href="../index.php" <?php session_unset(); session_destroy(); ?>>Sign Out</a>
-        <a href="#">TryMe</a>
-        <a href="#">TryMe</a>
+        <form method="post">
+            <input type="submit" name="logout" value="Logout">
+        </form>
+        <a href="./gestionDeCompte">Gestion de Compte</a>
+        <a href="./previousData">Données Précédant</a>
     </div>
 
-    
-
-
-
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm">
-                <a href="./creationEvenement.php">
-                    <div class="les3evenements">
-                        <h1>Creation Evenement</h2> 
-                    </div>
-                </a>
-            </div>
+    <a href="./creationEvenement.php">
+        <div class="les3evenements">
+            <h1>Creation Evenement</h2> 
         </div>
-        <div class="row">
-            <div class="col-sm">
-                <a href="./evenement.php">
-                    <div class="les3evenements">
-                        <h1>Lancer Evenement</h2> 
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm">
-                <a href="./gestionEvenement.php">
-                    <div class="les3evenements">
-                        <h1>Gestion Evenement</h2> 
-                    </div>
-                </a>
-            </div>
-        </div> 
-    </div>
+    </a>
 
-    
-    
+    <a href="./evenement.php">
+        <div class="les3evenements">
+            <h1>Lancer Evenement</h2> 
+        </div>
+    </a>
+
+    <a href="./gestionEvenement.php">
+        <div class="les3evenements">
+            <h1>Gestion Evenement</h2> 
+        </div>
+    </a>
+
     <script src="../js/action_accueil.js"></script>
     <script>
-        var door = false;
+        var door = true;
+        var set;
 
         function _open(){
 
             if (door == true)
             {
-                document.getElementById("sideBar").style.display = "fixed";
+                document.getElementById("sideBar").style.display = "initial";
+                document.getElementById("sideBar").style.transition = "transform 2.0s linear 0s";
+                document.getElementById("sideBar").style.transform = "translateX(-15vw)"; //not done
                 door = false;
             }
-            else 
+            else if (door == false)
             {
                 document.getElementById("sideBar").style.display = "none";
                 door = true;

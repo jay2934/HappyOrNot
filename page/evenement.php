@@ -10,6 +10,6 @@ session_start();
     <title>Document</title>
 </head>
 <body>
-    
+
 </body>
 </html>

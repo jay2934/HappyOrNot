@@ -9,6 +9,8 @@ nav {
     color: white;
     font-family: Glossy;
     height: 50px;
+    position: fixed;
+    width: 100vw;
 }
 
 .inline{
@@ -18,15 +20,31 @@ nav {
 #menu{
   position: absolute;
   right: 20px;
+  background-color: transparent;
+  border: transparent;
+  font-size: 24pt;
+  color: white;
+  border-radius: 100%;
+}
+
+#menu:hover{
+  background-color: rgb(9, 39, 99);
 }
 
 .les3evenements
 {
   background-color: gray;
   color: black;
+  height: 33.3333333333vh;
   border: black solid;
   border-top: 0px black solid;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.les3evenements:hover{
+  background-color: rgb(109, 109, 109);
 }
 
 a:link {
@@ -34,7 +52,11 @@ a:link {
 }
 
 #sideBar{
-  position: absolute;
-  left: 90vw;
-  top: 200px;
+  position: fixed;
+  left: 100vw;
+  display: none;
+  width: 15vw;
+  background-color: rgb(9, 45, 116);
+  height: 100vh;
+  transition: 4s;
 }
