@@ -21,22 +21,22 @@ if(isset($_SESSION['user_id'])) {
     <title>Accueil</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style_accueil.css">
+    <link rel="icon" type="image/x-icon" href="../img/logo.png">
 </head>
 <body>
 
 
     <nav>
         <h1 id="title" class="inline">happyornot</h1>
-        <button class="inline" id="menu" onclick="_open()">•••</h1>
+        <button class="inline" id="menu">•••</button>
+        <div id="sideBar">
+            <form method="post">
+                <input type="submit" name="logout" value="Logout">
+            </form>
+            <a href="./gestionDeCompte"><h2 id="options">Gestion de Compte</h2></a>
+            <a href="./previousData"><h2 id="options">Données Précédant</h2></a>
+        </div>
     </nav>
-
-    <div id="sideBar">
-        <form method="post">
-            <input type="submit" name="logout" value="Logout">
-        </form>
-        <a href="./gestionDeCompte">Gestion de Compte</a>
-        <a href="./previousData">Données Précédant</a>
-    </div>
 
     <a href="./creationEvenement.php">
         <div class="les3evenements">
@@ -57,27 +57,5 @@ if(isset($_SESSION['user_id'])) {
     </a>
 
     <script src="../js/action_accueil.js"></script>
-    <script>
-        var door = true;
-        var set;
-
-        function _open(){
-
-            if (door == true)
-            {
-                document.getElementById("sideBar").style.display = "initial";
-                document.getElementById("sideBar").style.transition = "transform 2.0s linear 0s";
-                document.getElementById("sideBar").style.transform = "translateX(-15vw)"; //not done
-                door = false;
-            }
-            else if (door == false)
-            {
-                document.getElementById("sideBar").style.display = "none";
-                door = true;
-            }
-            
-        }
-
-    </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
   }
 
 nav {
-    background-color: rgb(9, 45, 116);
+    background-color: black;
     box-shadow: 0px 5px 10px black;
     color: white;
     font-family: Glossy;
@@ -20,6 +20,7 @@ nav {
 #menu{
   position: absolute;
   right: 20px;
+  display: initial;
   background-color: transparent;
   border: transparent;
   font-size: 24pt;
@@ -54,9 +55,27 @@ a:link {
 #sideBar{
   position: fixed;
   left: 100vw;
-  display: none;
-  width: 15vw;
+  width: 20vw;
   background-color: rgb(9, 45, 116);
   height: 100vh;
-  transition: 4s;
+  transition: 0.4s;
+}
+
+#menu:hover+#sideBar{
+  left: 80vw;
+}
+
+#sideBar:hover{
+  left: 80vw;
+}
+
+#options{
+  margin-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+#options:hover{
+  background-color: rgb(9, 39, 99);
 }

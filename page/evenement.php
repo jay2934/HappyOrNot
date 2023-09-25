@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +8,11 @@ session_start();
     <title>Document</title>
 </head>
 <body>
+<!--
+REMEMBER TO START SESSION
+FOR THE MAPPING: https://www.w3schools.com/tags/tag_map.asp
 
+
+-->
 </body>
 </html>

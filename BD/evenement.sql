@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Jeu 14 Septembre 2023 à 20:56
+-- Généré le :  Lun 25 Septembre 2023 à 18:39
 -- Version du serveur :  5.7.11
--- Version de PHP :  7.0.3
+-- Version de PHP :  5.6.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,43 +23,45 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `login`
+-- Structure de la table `evenement`
 --
 
-CREATE TABLE `login` (
+CREATE TABLE `evenement` (
   `id` int(11) NOT NULL,
-  `userName` varchar(500) NOT NULL,
-  `password` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf16;
-
---
--- Contenu de la table `login`
---
-
-INSERT INTO `login` (`id`, `userName`, `password`) VALUES
-(1, 'root', 'root'),
-(2, 'admin', 'qwerty1234');
+  `nom` varchar(255) NOT NULL,
+  `moment` datetime NOT NULL,
+  `lieu` varchar(255) NOT NULL,
+  `departement` varchar(255) NOT NULL,
+  `etuBon` int(11) DEFAULT '0',
+  `etuOk` int(11) DEFAULT '0',
+  `etuMauvais` int(11) DEFAULT '0',
+  `etuTotal` int(11) DEFAULT '0',
+  `empBon` int(11) DEFAULT '0',
+  `empOk` int(11) DEFAULT '0',
+  `empMauvais` int(11) DEFAULT '0',
+  `empTotal` int(11) DEFAULT '0',
+  `total` int(11) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Index pour les tables exportées
 --
 
 --
--- Index pour la table `login`
+-- Index pour la table `evenement`
 --
-ALTER TABLE `login`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `userName` (`userName`);
+ALTER TABLE `evenement`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
 --
 
 --
--- AUTO_INCREMENT pour la table `login`
+-- AUTO_INCREMENT pour la table `evenement`
 --
-ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `evenement`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
