@@ -1,0 +1,42 @@
+body{
+    margin: 0px;
+    background-image: url(../img/event.jfif);/*TO CHANGE*/
+    text-align: center;
+    height: 100vh;
+    background-size: cover;
+}
+/*TO DO WITH LOGIN AS WELL*/
+/*MAKE IT SO DEPENDING ON VIEW PORT DIFFERENT CODE IS USED FOR CONTAINER SIZING*/
+#container
+{
+    position: absolute;
+    color: white;
+    top: 20vh;
+    left: 38%;
+    right: 38%;
+    bottom: 10vh;
+    background-color: #292424;
+    border: groove black 5px;
+    border-radius: 30px;
+    opacity: 0.95;
+
+}
+.inputfield{
+    border-radius: 20px;
+    height: 24px;
+    text-align: center;
+    background-color: #383333;
+    color: white;
+    width: 60%;
+}
+#submit{
+    background-color: #383333;
+    border-radius: 20px;
+    width: 50%;
+    height: 30px;
+    margin-top: 30px;
+    color: white;
+}
+#submit:hover{
+    background-color: rgb(20, 20, 20);
+}

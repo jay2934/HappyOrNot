@@ -1,0 +1,47 @@
+body{
+    margin: 0px;
+    background-image: url(../img/1.jpg);
+    text-align: center;
+    height: 100vh;
+    background-size: cover;
+}
+/*USE H2 EXCLUSIVLY FOR ERROR MESSAGES!!!!*/
+h2{
+color: red;
+}
+/*USE H2 EXCLUSIVLY FOR ERROR MESSAGES!!!!*/
+#container
+{
+    position: absolute;
+    color: white;
+    top: 20vh;
+    left: 38%;
+    right: 38%;
+    bottom: 34vh;
+    background-color: #292424;
+    border: groove black 5px;
+    border-radius: 30px;
+    opacity: 0.95;
+
+}
+.inputfield{
+    border-radius: 20px;
+    height: 24px;
+    text-align: center;
+    background-color: #383333;
+    color: white;
+    width: 60%;
+}
+
+#submit{
+    background-color: #383333;
+    border-radius: 20px;
+    width: 50%;
+    height: 30px;
+    margin-top: 30px;
+    color: white;
+}
+
+#submit:hover{
+    background-color: rgb(20, 20, 20);
+}
