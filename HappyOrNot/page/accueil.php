@@ -31,11 +31,11 @@ if(isset($_SESSION['user_id'])) {
         <h1 id="title" class="inline">happyornot</h1>
         <button class="inline" id="menu">•••</button>
         <div id="sideBar">
+            <a href="./gestionDeCompte"><h2 id="options">Gestion de Compte</h2></a>
+            <a href="./previousData"><h2 id="options">Données Précédant</h2></a>
             <form method="post">
                 <input type="submit" name="logout" value="Logout">
             </form>
-            <a href="./gestionDeCompte"><h2 id="options">Gestion de Compte</h2></a>
-            <a href="./previousData"><h2 id="options">Données Précédant</h2></a>
         </div>
     </nav>
 
@@ -45,7 +45,7 @@ if(isset($_SESSION['user_id'])) {
         </div>
     </a>
 
-    <a href="./evenement.php">
+    <a href="./evenementChose.php">
         <div class="les3evenements">
             <h1>Lancer Evenement</h2> 
         </div>

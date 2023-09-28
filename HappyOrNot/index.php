@@ -104,6 +104,6 @@ session_start();
         return $data;
     }
     ?>
-
 </body>
 </html>
+<!--privé-->
