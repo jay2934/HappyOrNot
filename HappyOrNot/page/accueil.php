@@ -24,8 +24,7 @@ if(isset($_SESSION['user_id'])) {
     <link rel="icon" type="image/x-icon" href="../img/logo.png">
 </head>
 <body>
-    <!--!!! Fast resizing of the windows width makes the side bar apear!!!-->
-    <!--!!! ON TABLET RE PRESSING THE 3 DOTS DOES NOT MAKE IT CLOSE!!!-->
+    
     
     <nav>
         <h1 id="title" class="inline">happyornot</h1>

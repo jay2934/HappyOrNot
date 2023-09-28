@@ -47,24 +47,24 @@ FOR THE MAPPING: https://www.w3schools.com/tags/tag_map.asp
     $sql = "SELECT id,nom From evenement";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
-
-        while($row = $result->fetch_assoc()) {
                     
             ?>
                 <div id="container">
                     <h1>Choisi un Événement a Lancer</h1>
                     <form action="" method="post">
-                        <select name="Events" size="6" style="width: 200px; font-size: 18pt;">
+                        <select id="selectrow" name="Events" size="6" style="width: 200px; font-size: 18pt;">
+                        <?php while($row = $result->fetch_assoc()) { ?>
                             <option value="<?php echo $row["id"];?>"><?php echo $row["nom"];?></option>
+                        <?php } ?>
                         </select>
+                        <a href="#" id="eventLink">text</a>
                     </form>
                     
                 </div>
             <?php
-                
-        }
-            
-    } else {
+        
+    } 
+    else if($result->num_rows = 0) {
         ?><h1>IL y a aucun événement!</h1>
         <a href="./accueil.php"><button type="button" class="btn btn-dark">Retour</button></a>
         <?php
@@ -73,3 +73,15 @@ FOR THE MAPPING: https://www.w3schools.com/tags/tag_map.asp
     ?>
 </body>
 </html>
+<script>
+    
+    var select = document.getElementById("selectrow");
+    var link = document.getElementById("eventLink");
+
+    select.addEventListener("change", function() {
+        var selectedOption = select.options[select.selectedIndex];
+        var eventId = selectedOption.value;
+        link.href = 'evenementMain.php?id=' + eventId;
+    });
+
+</script>
