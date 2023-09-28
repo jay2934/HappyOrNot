@@ -53,18 +53,21 @@ FOR THE MAPPING: https://www.w3schools.com/tags/tag_map.asp
             ?>
                 <div id="container">
                     <h1>Choisi un Événement a Lancer</h1>
-                        <form action="" method="post">
-                            <select name="Events" size="6" style="width: 200px; font-size: 18pt;">
-                                <option value="<?php echo $row["id"];?>"><?php echo $row["nom"];?></option>
-                            </select>
-                        </form>
+                    <form action="" method="post">
+                        <select name="Events" size="6" style="width: 200px; font-size: 18pt;">
+                            <option value="<?php echo $row["id"];?>"><?php echo $row["nom"];?></option>
+                        </select>
+                    </form>
+                    
                 </div>
             <?php
                 
         }
             
     } else {
-         echo "0 results";
+        ?><h1>IL y a aucun événement!</h1>
+        <a href="./accueil.php"><button type="button" class="btn btn-dark">Retour</button></a>
+        <?php
         }
         $conn->close();
     ?>
