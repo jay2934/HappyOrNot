@@ -27,6 +27,8 @@ if(isset($_SESSION['user_id'])) {
 <!--
 REMEMBER TO START SESSION
 FOR THE MAPPING: https://www.w3schools.com/tags/tag_map.asp
+NEEDS CSS!!!
+NEEDS DEBUGGING
 -->
 
 <?php
@@ -57,14 +59,15 @@ FOR THE MAPPING: https://www.w3schools.com/tags/tag_map.asp
                             <option value="<?php echo $row["id"];?>"><?php echo $row["nom"];?></option>
                         <?php } ?>
                         </select>
-                        <a href="#" id="eventLink">text</a>
+                        <a href="#" id="eventLink1">Étudiant</a>
+                        <a href="#" id="eventLink2">Employeur</a>
                     </form>
                     
                 </div>
             <?php
         
     } 
-    else if($result->num_rows = 0) {
+    else if($result->num_rows <= 0) {
         ?><h1>IL y a aucun événement!</h1>
         <a href="./accueil.php"><button type="button" class="btn btn-dark">Retour</button></a>
         <?php
@@ -76,12 +79,16 @@ FOR THE MAPPING: https://www.w3schools.com/tags/tag_map.asp
 <script>
     
     var select = document.getElementById("selectrow");
-    var link = document.getElementById("eventLink");
+    var link1 = document.getElementById("eventLink1");
+    var link2 = document.getElementById("eventLink2");
 
     select.addEventListener("change", function() {
         var selectedOption = select.options[select.selectedIndex];
         var eventId = selectedOption.value;
-        link.href = 'evenementMain.php?id=' + eventId;
+
+        link1.href = 'evenementMain.php?id=' + eventId + 'A';
+        link2.href = 'evenementMain.php?id=' + eventId + 'B';
+
     });
 
 </script>

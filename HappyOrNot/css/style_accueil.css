@@ -29,7 +29,7 @@ nav {
 }
 
 #menu:hover{
-  background-color: rgb(9, 39, 99);
+  background-color: #444444;
 }
 
 .les3evenements
@@ -79,6 +79,18 @@ a:link {
   color: white;
 }
 
-#options:hover{
+#logout{
+  background-color: transparent;
+  border: none;
+  margin-bottom: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  color: white;
+  width: 100%;
+  font-size: 24pt;
+}
+
+#options:hover, #logout:hover{
   background-color: #444444;
 }

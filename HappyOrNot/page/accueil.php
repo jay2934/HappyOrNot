@@ -33,7 +33,7 @@ if(isset($_SESSION['user_id'])) {
             <a href="./gestionDeCompte"><h2 id="options">Gestion de Compte</h2></a>
             <a href="./previousData"><h2 id="options">Données Précédant</h2></a>
             <form method="post">
-                <input type="submit" name="logout" value="Logout">
+                <input type="submit" name="logout" value="Logout" id="logout">
             </form>
         </div>
     </nav>
